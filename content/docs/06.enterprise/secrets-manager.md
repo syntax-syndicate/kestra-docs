@@ -83,9 +83,14 @@ kestra:
     type: google-secret-manager
     google-secret-manager:
       project: gcp-project-id
-      serviceAccount: |
+      service-account: |
         Paste here the contents of the service account JSON key file
 ```
+
+::alert{type="info"}
+If using docker-compose ensure that the newline characters are escaped in the private key of the service account, i.e. ensure all '\n' characters are replaced with '\\\n'
+::
+
 
 If you opt for authentication using the `GOOGLE_APPLICATION_CREDENTIALS` environment variable, make sure that it's set on all worker nodes. Keep in mind that this authentication method is less secure than using the `serviceAccount` property.
 
