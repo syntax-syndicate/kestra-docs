@@ -90,11 +90,11 @@ export default defineNuxtConfig({
       },
   },
 
-  router: {
-      options: {
-          strict: true
-      }
-  },
+  // router: {
+  //     options: {
+  //         strict: true
+  //     }
+  // },
 
   devServer: {
       port: 3001

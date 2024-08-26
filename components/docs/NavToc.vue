@@ -153,7 +153,7 @@
                         updatedElement.scrollIntoView({block: "nearest", inline: "nearest"});
                       }
                     });
-                  }, 1000);
+                  }, 2000);
                 }
               });
             }

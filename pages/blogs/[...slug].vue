@@ -77,17 +77,17 @@
         data.sort((a,b)=>
             new Date(a.date)-new Date(b.date)
         )
-    }
+    };
 
     const handleHash = (hashValue) => {
-      const element = window.document.getElementById(hashValue);
-      if (element) {
-        const offset = element?.getBoundingClientRect().top + window.scrollY;
-        setTimeout(() => {
-          window.scrollTo({ top: offset - 60 });
-        }, 100);
-      }
-    }
+      setTimeout(() => {
+        const element = window.document.getElementById(hashValue);
+        if (element) {
+          const offset = element?.getBoundingClientRect().top + window.scrollY;
+          window.scrollTo({ top: offset - 70 });
+        }
+      }, 4000)
+    };
 
     const extractHash = () => {
       const hash = route.hash;
@@ -144,9 +144,7 @@
         page.value = data.value;
           (async () => {
             await useContentHead(page);
-            setTimeout(() => {
-              extractHash()
-            }, 1000)
+            extractHash()
           })();
 
         const {title,author,description,image,date} = page.value
