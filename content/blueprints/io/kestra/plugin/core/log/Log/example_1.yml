@@ -1,0 +1,14 @@
+description: |
+  id: 280
+  title: Log one or more messages to the console.
+  demo: false
+  ee: false
+id: hello_world
+namespace: company.team
+
+tasks:
+  - id: greeting
+    type: io.kestra.plugin.core.log.Log
+    message:
+      - Kestra team wishes you a great day 👋
+      - If you need some help, reach out via Slack"
